@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "node --env-file .env.local --env-file .env.production dist/index.js",
     "dev": "ENV=DEV nodemon",
     "build": "tsc && esbuild src/index.ts --bundle --minify --packages=external --outdir=dist/",
     "lint": "eslint src/** --ext ts --report-unused-disable-directives --max-warnings 0",
